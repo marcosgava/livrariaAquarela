@@ -24,7 +24,7 @@
         
         <div class="col-12">
             <hr>
-            <h3 style="margin-bottom: 30px">Produtos desta loja</h3>
+            <h3 style="margin-bottom: 30px">Produtos da loja</h3>
             
         </div>
 
