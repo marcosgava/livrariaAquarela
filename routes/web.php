@@ -168,4 +168,5 @@ Route::get('not', function(){
 //	$notification->markAsRead();
 
 	//return $user->readNotifications->count();
+	//return $user->readNotifications->count();
 });

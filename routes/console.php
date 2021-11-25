@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Foundation\Inspiring;
+use NunoMaduro\Collision\Adapters\Phpunit\TestResult;
 
 /*
 |--------------------------------------------------------------------------
