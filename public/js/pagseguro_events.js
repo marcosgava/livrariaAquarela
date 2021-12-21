@@ -21,7 +21,7 @@ cardNumber.addEventListener('keyup', function(){
         });
     }
 });
- 
+
 let submitButton = document.querySelectorAll('button.processCheckout');
 console.log(submitButton);
 

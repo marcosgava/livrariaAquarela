@@ -5,11 +5,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use App\Traits\Slug;
 
 class Product extends Model
 {
     use HasSlug; 
-    protected $fillable = ['name', 'description', 'body', 'price', 'slug'];
+    protected $fillable = ['name', 'description', 'body', 'price', 'cost', 'slug'];
+
+    public function getThumbAttribute()
+	{
+		return $this->photos->first()->image;
+	}
 
      /**
      * Get the options for generating the slug.

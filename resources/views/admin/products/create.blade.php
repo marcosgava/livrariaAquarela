@@ -36,9 +36,19 @@
     </div>
 
     <div class="form-group">
-        <label>Preço</label>
+        <label>Preço de Venda</label>
         <input type="text" name="price" class="form-control @error('price') is-invalid @enderror" value="{{old('price')}}">
-            @error('details')
+            @error('price')
+                <div class="invalid-feedback">
+                    {{$message}}
+                </div>
+            @enderror
+    </div>
+
+    <div class="form-group">
+        <label>Preço de Custo</label>
+        <input type="text" name="cost" class="form-control @error('cost') is-invalid @enderror" value="{{old('cost')}}">
+            @error('cost')
                 <div class="invalid-feedback">
                     {{$message}}
                 </div>
@@ -54,14 +64,14 @@
         </select>
     </div>
 
-    <div class="form-group"> 
+    <div class="form-group">
         <label>Fotos do Produto</label>
-        <input type="file" name="photos[]" class="form-control @error ('photos.*') is_invalid @enderror" multiple>
-        @error ('photos') 
-            <div class="invalid-feedback"> 
-                {{$message}}
+        <input type="file" name="photos[]" class="form-control @error('photos.*') is-invalid @enderror" multiple>
+        @error('photos.*')
+           <div class="invalid-feedback">
+             {‌{$message}}
             </div>
-        @enderror
+         @enderror
     </div>
 
     <div>

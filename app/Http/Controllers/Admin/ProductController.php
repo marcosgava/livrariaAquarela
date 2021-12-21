@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
-//use App\Store;
 use App\Http\Requests\ProductRequest;
 use App\Traits\UploadTrait;
 
@@ -58,7 +57,8 @@ class ProductController extends Controller
     {
         $data = $request->all();
         $categories = $request->get('categories', null);
-        //$data['price'] = formatPriceToDatabase($data['price']);
+        $data['price'] = formatPriceToDatabase($data['price']);
+        $data['cost'] = formatPriceToDatabase($data['cost']);
 
         $store = auth()->user()->store;
         $product = $store->products()->create($data);
