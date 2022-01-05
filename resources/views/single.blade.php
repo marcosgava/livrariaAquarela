@@ -39,7 +39,7 @@
                     <input type="hidden" name="product[price]" value="{{$product->price}}">
                     <input type="hidden" name="product[slug]" value="{{$product->slug}}">
                     <div class="form-group">
-                        <label for="">Quantidade</label>
+                        <label style="font-size: 18px">Quantidade</label>
                         <input type="number" name="product[amount]" class="form-control col-md-2" value="1">
                     </div>
                     <button class="btn btn-lg btn-primary">Comprar</button>
@@ -52,7 +52,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-12" style="font-size: 28px">
             <hr>
             {{$product->body}}
         </div>
