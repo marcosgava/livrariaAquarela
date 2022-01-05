@@ -2,6 +2,7 @@
 
 
 @section('content')
+    
     <div class="row front">
         @foreach ($products as $key => $product)
             <div class="col-md-4">
