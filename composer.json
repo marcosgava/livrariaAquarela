@@ -16,7 +16,8 @@
         "laravel/ui": "2.0",
         "pagseguro/pagseguro-php-sdk": "^6.0",
         "ramsey/uuid": "^4.2",
-        "spatie/laravel-sluggable": "^2.2"
+        "spatie/laravel-sluggable": "^2.2",
+        "symfony/polyfill-php80": "^1.24"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
