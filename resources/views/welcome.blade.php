@@ -2,6 +2,7 @@
 
 
 @section('content')
+    
     <div class="row front">
         @foreach ($products as $key => $product)
             <div class="col-md-4">
@@ -28,7 +29,7 @@
                             <input type="hidden" name="product[price]" value="{{$product->price}}">
                             <input type="hidden" name="product[slug]" value="{{$product->slug}}">
                             <div class="form-group">
-                                <label for="">Quantidade</label>
+                                <label for="" style="font-size: 16px">Quantidade</label>
                                 <input type="number" name="product[amount]" class="form-control col-md-2" value="1">
                             </div>
                             <a href="{{route('product.single', ['slug' => $product->slug])}}" class="btn btn-success">Ver Produto</a>
