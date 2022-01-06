@@ -8,13 +8,13 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.4.",
+        "php": "^8.0.",
         "fideloper/proxy": "^4.4",
         "laracasts/flash": "^3.2",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "2.0",
-        "pagseguro/pagseguro-php-sdk": "^6.0",
+        "laravel/ui": "2.0.0",
+        "pagseguro/pagseguro-php-sdk": "^6.0.0",
         "ramsey/uuid": "^4.2",
         "spatie/laravel-sluggable": "^2.2"
     },
