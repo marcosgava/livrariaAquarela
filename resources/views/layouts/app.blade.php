@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria Aquarela</title>
+    <title>Livraria Aquarela - Admin</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}"  crossorigin="anonymous">
 </head>
 <body>
@@ -20,7 +20,7 @@
             @auth
                  <ul class="navbar-nav mr-auto">
                     <li class="nav-item @if(request()->is('admin/orders*')) active @endif">
-                        <a class="nav-link" href="{{route('admin.orders.my')}}">Meus Pedidos</a>
+                        <a class="nav-link" href="{{route('admin.orders.my')}}">Pedidos Recebidos</a>
                     </li>
                     <li class="nav-item  @if(request()->is('admin/stores*')) active @endif">
                         <a class="nav-link" href="{{route('admin.stores.index')}}">Loja</a>

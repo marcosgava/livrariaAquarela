@@ -108,9 +108,11 @@ class CategoryController extends Controller
      */
     public function destroy($category)
     {
+        
 	    $category = $this->category->find($category);
 	    $category->delete();
 
+        
 	    flash('Categoria Removida com Sucesso!')->success();
 	    return redirect()->route('admin.categories.index');
     }
