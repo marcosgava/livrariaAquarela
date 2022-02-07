@@ -48,8 +48,18 @@ class Handler extends ExceptionHandler
      *
      * @throws \Exception
      */
-    public function render($request, Throwable $exception)
-    {
+    public function render($request, Exception $exception)
+    {   
+        if($exception instanceof CustomException){
+
+            preg_match('#\[(.*?)\]#',$exception->getPrevious()->getMessage(), $match);
+            $mysql_error_code = $match[1];
+            if($mysql_error_code == '23000'){
+                return response()->json((["message" => 'Não é possível executar essa ação', "errors" => 'Chave estrangeira inválida'], 400);
+            }
+            return response()->json((["message" => 'Não é possível executar essa ação', "errors" => $exception->errors()], 400);
+        }
+
         return parent::render($request, $exception);
     }
 }
