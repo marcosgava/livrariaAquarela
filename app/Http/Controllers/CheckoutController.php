@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Store;
+use App\Payment\PagSeguro\CreditCard;
 use App\Payment\PagSeguro\Boleto;
 use Ramsey\Uuid\Uuid;
 
